@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-carevia-blue: #004e98;
+  --color-carevia-purple: #a87ca0;
+  --color-carevia-green: #73c045;
+  --color-carevia-bg: #f9fafb;
+  
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  html, body {
+    @apply bg-carevia-bg text-gray-900 font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+}
+
+/* Custom Utilities for Premium Look */
+@layer utilities {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .btn-primary {
+    @apply bg-carevia-blue text-white px-6 py-3 rounded-xl font-semibold transition-all hover:bg-carevia-blue/90 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-carevia-blue/20;
+  }
+  
+  .btn-secondary {
+    @apply bg-carevia-green text-white px-6 py-3 rounded-xl font-semibold transition-all hover:bg-carevia-green/90 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-carevia-green/20;
+  }
+}
